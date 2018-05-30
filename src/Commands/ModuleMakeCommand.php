@@ -28,7 +28,6 @@ class ModuleMakeCommand extends Command
      */
     public function handle()
     {
-		$this->info("Test");
         $names = $this->argument('name');
 
         foreach ($names as $name) {
