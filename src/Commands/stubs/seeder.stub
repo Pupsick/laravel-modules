@@ -5,6 +5,8 @@ namespace $NAMESPACE$;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
+use Modules\Product\Entities\Product;
+
 class $NAME$ extends Seeder
 {
     /**
@@ -17,5 +19,10 @@ class $NAME$ extends Seeder
         Model::unguard();
 
         // $this->call("OthersTableSeeder");
+		Product::insert([
+          "id" => Config::get("payment.product_id"),
+          "name" => $STUDLY_NAME$,
+          "money" => 0,
+        ]);
     }
 }
