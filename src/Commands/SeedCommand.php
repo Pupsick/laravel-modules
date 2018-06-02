@@ -46,13 +46,13 @@ class SeedCommand extends Command
                 array_walk($modules, [$this, 'moduleSeed']);
                 $this->info('All modules seeded.');
             }
-        } catch (\Throwable $e) {
-            $this->reportException($e);
+        } catch (Exception $e) {
+			$this->reportException($e);
 
             $this->renderException($this->getOutput(), $e);
-
-            return 1;
-        }
+			return 1;
+		}
+		
     }
 
     /**
