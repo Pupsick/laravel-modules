@@ -1,9 +1,17 @@
-@extends('$LOWER_NAME$::layouts.master')
+@extends('core::layouts.master')
+
+
+@extends('core::layouts.master')
 
 @section('content')
-    <h1>Hello World</h1>
+  <content-layer></content-layer>
+@endsection
 
-    <p>
-        This view is loaded from module: {!! config('$LOWER_NAME$.name') !!}
-    </p>
-@stop
+
+@push("footer_scripts")
+{{-- <script src="{{ mix('js/$LOWER_NAME$.js') }}"></script> --}}
+@endpush
+
+@push("header_scripts")
+ {{-- <link rel="stylesheet" href="{{ mix('css/$LOWER_NAME$.css') }}"> --}}
+@endpush
