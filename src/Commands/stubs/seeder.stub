@@ -19,10 +19,10 @@ class $NAME$ extends Seeder
     {
         Model::unguard();
 
-		    Product::insert([
-          "id" => Config::get('$LOWER_NAME$.product_id'),
-          "name" => '$STUDLY_NAME$',
-          "money" => 0,
-        ]);
+		    // Product::insert([
+        //   "id" => Config::get('$LOWER_NAME$.product_id'),
+        //   "name" => '$STUDLY_NAME$',
+        //   "money" => 0,
+        // ]);
     }
 }
