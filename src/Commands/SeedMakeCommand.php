@@ -66,11 +66,13 @@ class SeedMakeCommand extends GeneratorCommand
     protected function getTemplateContents()
     {
         $module = $this->laravel['modules']->findOrFail($this->getModuleName());
- 
+
         return (new Stub('/seeder.stub', [
             'NAME' => $this->getSeederName(),
             'MODULE' => $this->getModuleName(),
             'NAMESPACE' => $this->getClassNamespace($module),
+            'LOWER_NAME' => $module->getLowerName(),
+			      'STUDLY_NAME' => $module->getStudlyName()
 
         ]))->render();
     }
