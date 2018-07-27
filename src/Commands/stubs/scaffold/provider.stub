@@ -4,6 +4,7 @@ namespace $NAMESPACE$;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use JavaScript;
 
 class $CLASS$ extends ServiceProvider
 {
@@ -26,6 +27,15 @@ class $CLASS$ extends ServiceProvider
         $this->registerViews();
         $this->registerFactories();
         $this->loadMigrationsFrom(__DIR__ . '/../$MIGRATIONS_PATH$');
+
+        // view()->composer('core::layouts.master', function ($view) {
+        //   $data = [];
+        //
+        //   JavaScript::put([
+        //     '$LOWER_NAME$' => $data
+        //   ]);
+        //   return $view;
+        // });
     }
 
     /**
@@ -35,7 +45,9 @@ class $CLASS$ extends ServiceProvider
      */
     public function register()
     {
-        //
+        //$this->commands([
+        //  \Modules\$STUDLY_NAME$\Console\$STUDLY_NAME$Command::class,
+        //]);
     }
 
     /**
@@ -91,7 +103,7 @@ class $CLASS$ extends ServiceProvider
 
     /**
      * Register an additional directory of factories.
-     * 
+     *
      * @return void
      */
     public function registerFactories()

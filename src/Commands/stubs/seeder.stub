@@ -5,6 +5,7 @@ namespace $NAMESPACE$;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
+use Config;
 use Modules\Product\Entities\Product;
 
 class $NAME$ extends Seeder
