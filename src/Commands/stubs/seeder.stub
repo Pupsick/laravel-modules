@@ -20,8 +20,8 @@ class $NAME$ extends Seeder
 
         // $this->call("OthersTableSeeder");
 		Product::insert([
-          "id" => Config::get("payment.product_id"),
-          "name" => $STUDLY_NAME$,
+          "id" => Config::get("$LOWER_NAME$.product_id"),
+          "name" => "$STUDLY_NAME$",
           "money" => 0,
         ]);
     }
